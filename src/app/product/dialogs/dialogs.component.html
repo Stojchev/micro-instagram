@@ -1,0 +1,10 @@
+<!-- <h1 mat-dialog-title>Editting</h1> -->
+<div *ngIf="showEdit">
+  <div mat-dialog-content>You have succesfully edited your photo!</div>
+</div>
+<div *ngIf="showDelete">
+  <div mat-dialog-content>You have succesfully deleted your photo!</div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close (click)="onClose()">Close</button>
+</div>

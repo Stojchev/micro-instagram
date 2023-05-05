@@ -1,0 +1,20 @@
+<div class="container" *ngIf="photo" >
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image" [style.backgroundImage]="'url(' + photo.thumbnailUrl + ')'"></div>
+      <mat-card-title>{{photo.title}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image  [src]="photo.url"  alt="{{photo.title+' image'}}">
+    <mat-card-content>
+      <p>
+        This photo is in album with ID {{photo.albumId}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="mat-card-action-items">
+      <button mat-flat-button color="accent" class="edit-btn" [routerLink]="['/products/edit', photo.id]">Edit</button>&nbsp;
+      <button mat-raised-button color="warn" (click)="deleteProduct(photo.id)">Delete</button>
+      <button mat-raised-button routerLink="/">Go back to products</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+

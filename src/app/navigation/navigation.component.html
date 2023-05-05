@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <button mat-button class="sidenav-toggle">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <a routerLink="/all-products" class="navigation-link">All photos</a>
+  <span class="example-spacer"></span>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="openAddContactDialog()">New Photo</button>
+    <button mat-menu-item *ngIf="showButtons">Edit Photo</button>
+    <button mat-menu-item *ngIf="showButtons">Delete Photo</button>
+  </mat-menu>
+</mat-toolbar>

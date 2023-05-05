@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>Edit Product</h2>
+<mat-dialog-content [formGroup]="myForm">
+  <div class="example-container">
+    <mat-form-field appearance="fill" class="example-container-content">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" required />
+      <!-- <mat-error *ngIf="title.invalid">{{ getErrorMessage(title) }}</mat-error> -->
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="fill" class="example-container-content">
+      <mat-label>Album Id</mat-label>
+      <input matInput formControlName="albumId" required type="number" />
+      <!-- <mat-error *ngIf="albumId.invalid">{{
+        getErrorMessage(albumId)
+      }}</mat-error> -->
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="fill" class="example-container-content">
+      <mat-label>Image Url</mat-label>
+      <input matInput formControlName="imageUrl" required />
+      <!-- <mat-error *ngIf="url.invalid">{{ getErrorMessage(url) }}</mat-error> -->
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="fill" class="example-container-content">
+      <mat-label>Thumbnail URL</mat-label>
+      <input matInput formControlName="thumbnailUrl" required />
+      <!-- <mat-error *ngIf="thumbnailURL.invalid">{{
+        getErrorMessage(thumbnailURL)
+      }}</mat-error> -->
+    </mat-form-field
+    ><br />
+    <div class="btn-content">
+      <button mat-raised-button (click)="save()" class="btn-content-items">Edit</button>
+      <button mat-raised-button (click)="dismiss()" class="btn-content-items">Go back to product</button>
+    </div>
+
+  </div>
+</mat-dialog-content>
